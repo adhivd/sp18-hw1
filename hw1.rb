@@ -1,17 +1,21 @@
 def squared_sum(a, b)
-  # Q1 CODE HERE
-
+  (a + b)**2
 end
 
 def sort_array_plus_one(a)
-  # Q2 CODE HERE
-
+    a.sort!
+    a.map! do | el |
+        el = el + 1
+    end
 end
+
+# puts sort_array_plus_one([1,3, 4, 5,2])
 
 def combine_name(first_name, last_name)
-  # Q3 CODE HERE
-
+  first_name << " " << last_name
 end
+
+# puts combine_name("yo", " boiiiiiii") --> single quotes vs double quotes doesn't matter
 
 def blockin_time(a)
   # DO NOT EDIT THIS CODE BELOW
@@ -48,5 +52,5 @@ def scrabble(word)
     y: 4,
     z: 10,
   }
-  # Q5 CODE HERE
+  word.split('').map.inject(0){ |sum, el| sum += values[el.to_sym]}
 end
